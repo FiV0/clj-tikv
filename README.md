@@ -13,9 +13,15 @@ The second option is to user docker-compose. The instructions for this
 can be found at [https://tikv.org/docs/3.0/tasks/try/docker-stack/]()
 or you just go to the dev-tikv subdirectory and call
 ```
-$ docker stack deploy --compose-file stack.yml tikv
+$ cd dev-tikv
+$ docker-compose up
 ```
 This should suffice to let you connect to a TiKV instance on `localhost:2379`.
+
+To run the setup inside a docker swarm component run
+```
+$ docker stack deploy --compose-file stack.yml tikv
+```
 
 ### Projects using clj-tikv
 
